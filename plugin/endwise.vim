@@ -59,6 +59,10 @@ augroup endwise " {{{1
         \ let b:endwise_addition = 'end' |
         \ let b:endwise_words = 'function,if,for' |
         \ let b:endwise_syngroups = 'matlabStatement,matlabFunction,matlabConditional,matlabRepeat'
+  autocmd FileType julia
+        \ let b:endwise_addition = 'end' |
+        \ let b:endwise_words = 'if,for,while,begin,function,macro,quote,type,immutable,let,do,module,baremodule,try' |
+        \ let b:endwise_syngroups = 'juliaConditionalBlock,juliaRepeatBlock,juliaBlKeywordBlock,juliaExceptionBlock'
   autocmd FileType htmldjango
         \ let b:endwise_addition = '{% end& %}' |
         \ let b:endwise_words = 'autoescape,block\(\s\+\S*\)\?,blocktrans,cache,comment,filter,for,if,ifchanged,ifequal,ifnotequal,language,spaceless,verbatim,with' |
